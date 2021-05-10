@@ -15,7 +15,7 @@ pipeline {
 
             post {
                 always {
-                    junit '**/target/surefire-reports/Test-*.xml'
+                    junit '/var/jenkins_home/workspace/calculator_api/target/surefire-reports/TEST-*.xml'
                 }
             }
         }
