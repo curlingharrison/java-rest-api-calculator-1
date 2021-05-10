@@ -6,11 +6,13 @@ pipeline {
             steps {
                 git 'https://github.com/curlingharrison/java-rest-api-calculator-1.git'
                 sh './mvnw clean compile'
+
             }
         }
-        stage('Test)'{
+        stage('Test)' {
             steps {
                 sh './mvnw test'
+
             }
 
             post {
