@@ -14,12 +14,6 @@ pipeline {
                 sh './mvnw test'
 
             }
-
-            post {
-                always {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                }
-            }
         }
     }
 }
