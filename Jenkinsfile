@@ -12,14 +12,6 @@ pipeline {
             steps {
                 sh './mvnw test'
             }
-
-            post {
-                always {
-                    sh 'cd /var/jenkins_home/workspace/calculator_api/target/surefire-reports'
-                    sh 'cp TEST-com.coralogix.calculator.CalculatorApplicationTests.xml $WORKSPACE'
-                    junit 'TEST-*.xml'
-                }
-            }
         }
     }
 }
